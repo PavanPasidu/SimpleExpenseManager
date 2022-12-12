@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.DataBaseHelper;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.AccountDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.exception.InvalidAccountException;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Account;
@@ -58,6 +59,7 @@ public class InMemoryAccountDAO implements AccountDAO {
 
     @Override
     public void addAccount(Account account) {
+
         accounts.put(account.getAccountNo(), account);
     }
 
@@ -67,6 +69,7 @@ public class InMemoryAccountDAO implements AccountDAO {
             String msg = "Account " + accountNo + " is invalid.";
             throw new InvalidAccountException(msg);
         }
+
         accounts.remove(accountNo);
     }
 
