@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\SimpleExpenseManager\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\SimpleExpenseManager2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-2\\files-2.1\\d077425ebc7d279b27502cf2b2becb72\\support-media-compat-26.1.0\\res\\values-v21\\values-v21.xml",
@@ -20,6 +20,25 @@
                         "endLines": "293,296,300,304",
                         "endColumns": "12,12,12,12",
                         "endOffsets": "21465,21628,21922,22217"
+                    }
+                },
+                {
+                    "source": "C:\\SimpleExpenseManager2\\app\\src\\main\\res\\values-v21\\styles.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "722",
+                        "endLines": "23",
+                        "endColumns": "12",
+                        "endOffsets": "1023"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "354",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "650"
                     }
                 },
                 {
@@ -77,25 +96,6 @@
                         "endLines": "172,234",
                         "endColumns": "12,96",
                         "endOffsets": "13084,17520"
-                    }
-                },
-                {
-                    "source": "C:\\SimpleExpenseManager\\app\\src\\main\\res\\values-v21\\styles.xml",
-                    "from": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "722",
-                        "endLines": "23",
-                        "endColumns": "12",
-                        "endOffsets": "1023"
-                    },
-                    "to": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "354",
-                        "endLines": "11",
-                        "endColumns": "12",
-                        "endOffsets": "650"
                     }
                 }
             ]

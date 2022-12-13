@@ -44,7 +44,7 @@ public class presistanceAccountDAO implements AccountDAO{
         SQLiteDatabase DBh = DBhelp.getReadableDatabase();
         String [] col = {"ACC_No","Bank_Name", "ACCHolderName","BalanceOfACC"};
         String[] arg = {accountNo};
-        Cursor c = DBh.query("Accounts", col, "ACC_No = ?",arg,null,null,null);
+        Cursor c = DBh.query("AccountDetails", col, "ACC_No = ?",arg,null,null,null);
 
         Account TheACC = DBhelp.setACCDetails(c);
         return TheACC;

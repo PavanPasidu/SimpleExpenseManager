@@ -114,7 +114,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         List ACC_NUM_Lis = new ArrayList<>();
         SQLiteDatabase DB1 = d.getReadableDatabase();
         String [] col = {"Account_No"};
-        Cursor cursor1 = DB1.query("Accounts", col,
+        Cursor cursor1 = DB1.query("AccountDetails", col,
                 null,null,null,null,null);
 
         while(cursor1.moveToNext()) {
@@ -132,18 +132,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         List ACC_lis = new ArrayList<>();
         String [] col = {"Account_No","Bank_Name", "AccountHolder_Name","Balance"};
         SQLiteDatabase db = db_h.getReadableDatabase();
-        Cursor cursor2 = db.query("Accounts", col, null,null,null,null,null);
+        Cursor cursor2 = db.query("AccountDetails", col, null,null,null,null,null);
 
         while(cursor2.moveToNext()) {
 
-            String ACC_No = cursor2.getString(cursor2.getColumnIndexOrThrow("accountNo"));
-            String Bank_Name = cursor2.getString(cursor2.getColumnIndexOrThrow("bankName"));
-            String ACCHolderName = cursor2.getString(cursor2.getColumnIndexOrThrow("accountHolderName"));
-            double Balance = cursor2.getDouble(cursor2.getColumnIndexOrThrow("balance"));
+            String ACC_No = cursor2.getString(cursor2.getColumnIndexOrThrow("Account_No"));
+            String Bank_Name = cursor2.getString(cursor2.getColumnIndexOrThrow("Bank_Name"));
+            String ACCHolderName = cursor2.getString(cursor2.getColumnIndexOrThrow("AccountHolder_Name"));
+            double Balance = cursor2.getDouble(cursor2.getColumnIndexOrThrow("Balance"));
 
-            Account myacc = new Account(ACC_No, Bank_Name, ACCHolderName, Balance);
+            Account TheACC = new Account(ACC_No, Bank_Name, ACCHolderName, Balance);
 
-            ACC_lis.add(myacc);
+            ACC_lis.add(TheACC);
         }
 
         cursor2.close();
@@ -185,7 +185,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public List<Transaction> getPagTransaction_logs(int limit, SQLiteDatabase DBsql, long cntn){
 
-        String [] col = {"Date","ACC_No", "expenceMode","amount"};
+        String [] col = {"Date","ACC_No", "expenceMode","Amount"};
         Cursor crsr = DBsql.query("TransactionDetails", col, null,null,null,null,null);
 
         List transactionsLis = new ArrayList<>();

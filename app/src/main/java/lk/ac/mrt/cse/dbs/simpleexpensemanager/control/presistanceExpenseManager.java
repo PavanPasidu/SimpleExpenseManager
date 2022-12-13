@@ -13,11 +13,11 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Account;
 
 public class presistanceExpenseManager extends ExpenseManager{
 
-    private Context contxt;
-
+    Context contxt;
+    // constructor
     public presistanceExpenseManager(Context context) {
 
-        this.contxt=context;
+        contxt=context;
         setup();
     }
 
